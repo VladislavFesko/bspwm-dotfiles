@@ -1,0 +1,56 @@
+* {
+	background: rgba (45, 48, 59, 95%);
+	foreground: rgba (196, 203, 212, 100%);
+	normal-background: @background;
+	normal-foreground: @foreground;
+	active-background: rgba(64, 132, 214, 100%);
+	selected-normal-background: @active-background;
+	selected-normal-foreground: rgba(249, 249, 249, 100%);
+	alternate-normal-background: rgba(0, 0, 0, 0%);
+	separator-color: @foreground;
+}
+configuration {
+	font: "Roboto 10";
+	disable-history: true;
+	drun-display-format: "{name}";
+}
+window {
+	width: 30em;
+	background-color: @background;
+	padding: 5;
+}
+mainbox {
+	border: 0;
+}
+listview {
+	cycle: false;
+	fixed-height: 0;
+	spacing: 2px;
+	lines: 12;
+	border: 2px 0px 0px;
+	border-color: @foreground;
+}
+inputbar {
+	children: [ entry ];
+	expand: false;
+	spacing: 0;
+	padding: 1px;
+}
+entry {
+	spacing: 0;
+	placeholder: "Search...";
+	placeholder-color: rgba(196, 203, 212, 50%);
+}
+scrollbar {
+	width: 2px;
+	border: 0;
+	handle-color: @foreground;
+	handle-width: 5px;
+	padding: 0;
+}
+element {
+	padding: 3px;
+}
+element.normal.normal {
+	background-color: rgba(0, 0, 0, 0%);
+}

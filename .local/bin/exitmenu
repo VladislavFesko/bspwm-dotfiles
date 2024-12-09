@@ -1,0 +1,7 @@
+#!/bin/sh
+OPTIONS="󰍃 Logout\n Restart\n󰐥 Shutdown"
+case $(echo -e "$OPTIONS" | rofi -dmenu -config "$HOME/.config/rofi/dialog.rasi") in
+	"󰍃 Logout") pkill -u "$USER" ;;
+	" Restart") loginctl reboot ;;
+	"󰐥 Shutdown") loginctl poweroff ;;
+esac

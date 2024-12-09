@@ -1,0 +1,8 @@
+@import "~/.config/rofi/config.rasi"
+mainbox {
+	children: [ listview ];
+}
+listview {
+	scrollbar: false;
+	border: 0px;
+}

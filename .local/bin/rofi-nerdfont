@@ -1,0 +1,3 @@
+#!/bin/sh
+NERDFONT_FILE="$HOME/.local/share/nerdfont.txt"
+cat "$NERDFONT_FILE" | rofi -dmenu -i | awk '{print $1}' | xclip -i -selection clipboard
